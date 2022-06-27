@@ -1,4 +1,3 @@
-
 import './Register.css';
 import {Link,useNavigate} from 'react-router-dom';
 import {useState} from 'react';
@@ -42,14 +41,14 @@ function Register(){
 
 
     return (<div>
-          <div className="container">
-              <div className="row">
-                <div className="col-4">
+          <div className="login-container row">
+                  <div className="col-4">
 
                 </div>
-                <div className="col-4">
+                <div className="col-4-sign">
                   <form>
                       <div className="form-group">
+                        <center> New Employee Sign up </center>
                           <label>First Name</label>
                           <input type="text"  onChange={onChangeHandler} value={getForm.firstName} className="form-control" id="firstName" name="firstName"  placeholder="Enter first name"/>
                         </div>
@@ -82,7 +81,7 @@ function Register(){
               </div>
               </div>
      
-          </div>
+          
     </div>)
 }
 

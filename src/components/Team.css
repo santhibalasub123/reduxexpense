@@ -1,0 +1,16 @@
+.container-Box{
+    max-width:120px !important;
+     height:160px;
+     background-color: #e9e9f1;
+     border-color: blue;
+     margin:10px;
+     border-radius: 5px;
+     justify-content: center;
+     align-items:center;
+    
+}
+.parent-container{
+    display: flex;
+    margin-left: 190px;
+
+}

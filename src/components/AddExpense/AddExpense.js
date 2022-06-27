@@ -14,7 +14,6 @@ function AddExpense(){
 
   const navigate = useNavigate();
 
-
   const onChangeHandler=(event)=>{
     setExpense({
       ...getExpense,[event.target.name]:event.target.value
@@ -60,21 +59,21 @@ function AddExpense(){
                 <div className="col-4">
                   <form>
                       <div className="form-group">
-                          <label>Expense Name</label>
+                          <label>Employee  Name</label>
                           <input type="text"  value={getExpense.expenseName} onChange={onChangeHandler} name="expenseName" className="form-control" id="firstName"  placeholder="Enter first name"/>
                         </div>
                         <div className="form-group">
-                          <label>Amount</label>
+                          <label>salary</label>
                           <input  value={getExpense.amount} onChange={onChangeHandler} type="text" name="amount" className="form-control" id="lastName"  placeholder="Enter last name"/>
                         </div>
                         
                       <div className="form-group">
-                        <label>Paid By</label>
+                        <label>JobName</label>
                         <input value={getExpense.paidBy} onChange={onChangeHandler} type="text" name="paidBy" className="form-control" id="email" placeholder="Enter email"/>
                       
                       </div>
                       <div className="form-group">
-                        <label>Date</label>
+                        <label>JoinDate</label>
                         <input value={getExpense.date} onChange={onChangeHandler} type="date"  name="date" className="form-control" id="password" placeholder="Password"/>
                       </div>
                   

@@ -3,6 +3,7 @@ import {Link,useNavigate} from 'react-router-dom';
 import {useState} from 'react';
 import {emailValidation,passwordValidation}  from '../Validation';
 import {useDispatch } from 'react-redux';
+import adminlo from '../../assests/adminlo.png';
 import Users from '../../services/users';
 
 function Login(){
@@ -39,7 +40,7 @@ function Login(){
       let password = sessionStorage.getItem('password');
       if(email === getForm.email && password === getForm.password){
         Users.loadUsers(dispatch,email,password);
-        navigate('/dashboard');
+        navigate('/Navbar');
       }
       else{
         setValidation({
@@ -52,18 +53,17 @@ function Login(){
 }
 
 
-
-
-
     return (<div>
-                  <div class="container">
-              <div class="row">
-                <div class="col-4">
-
+ <div className="login-container row">
+                {/* <div className="row"> */}
+                <div className="col-4">
                 </div>
-                <div class="col-4">
-                  <form>        
-                      <div class="form-group">
+                <div className="col-4 login-container-box">
+                    <form>
+                      <div className="form-group">
+                        <h1><center> ADMIN</center></h1>
+                      <center><img src={adminlo} width= {100} height= {100}/></center><br/>
+
                         <label>Email address</label>
                         <input type="email" onChange={onChangeHandler} value={getForm.email} className="form-control" id="email" name="email"  class="form-control" placeholder="Enter email"/>
                         {getValidation.email && <div class="alert alert-danger" role="alert">
@@ -79,7 +79,7 @@ function Login(){
 </div>}
                       </div>
                   
-                      <button onClick={onSubmitHandler}  type="submit" class="btn btn-success">Submit</button>
+                      <button onClick={onSubmitHandler}  type="submit" class="btn btn-success"><center>Submit</center></button>
                     </form>
               </div>
                 <div class="col-4">
@@ -88,7 +88,7 @@ function Login(){
               </div>
      
           </div>
-    </div>)
+    )
 }
 
 export default Login;

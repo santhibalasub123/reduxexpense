@@ -107,17 +107,17 @@ const Dashboard=()=>{
                 <div className="col-3">
                     <form>        
                         <div className="form-group">
-                          <label>Expense name</label>
-                          <input type="text" value={getSearch} onChange={onChangeSearchHandler} className="form-control" id="expenseName" name="searchExpenseName" placeholder="Enter expenseName"/>
+                          <label>Employee name</label>
+                          <input type="text" value={getSearch} onChange={onChangeSearchHandler} className="form-control" id="employee Name" name="searchExpenseName" placeholder="Enter employee Name"/>
                         
                         </div>       
                         <button onClick={searchFilter} type="submit" className="btn btn-success">Search</button>
-                        <button onClick={resetFilter}>Reset</button>
+                        <button onClick={resetFilter}>Back</button>
                       </form>
                 </div>
                 <div className="col-7"></div>
                 <div className="col-2">
-                <button type="submit" className="btn btn-success"><Link to="/addExpense">Add Expense</Link></button>
+                <button type="submit" className="btn btn-success"><Link to="/addExpense">Add New Employee</Link></button>
                 </div>
                 
               </div>
@@ -128,10 +128,10 @@ const Dashboard=()=>{
                         <thead>
                           <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Expense Name</th>
-                            <th scope="col">Amount</th>
-                            <th scope="col">Paid by</th>
-                            <th scope="col">Date</th>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">salary</th>
+                            <th scope="col">JobName</th>
+                            <th scope="col">JoinDate</th>
                             <th scope="col">Edit</th>
                             <th scope="col">Delete</th>
                           </tr>
@@ -171,7 +171,7 @@ const Dashboard=()=>{
     <div className="modal-dialog" role="document">
       <div className="modal-content">
         <div className="modal-header">
-          <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 className="modal-title" id="exampleModalLabel">Updated Employee details</h5>
           <button type="button" className="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -179,22 +179,22 @@ const Dashboard=()=>{
         <div className="modal-body">
         <form>
                       <div className="form-group">
-                          <label>Expense Name</label>
-                          <input type="text"  value={getExpense.expenseName} onChange={onChangeHandler} name="expenseName" className="form-control" id="firstName"  placeholder="Enter first name"/>
+                          <label>Employee Name</label>
+                          <input type="text"  value={getExpense.expenseName} onChange={onChangeHandler} name="expenseName" className="form-control" id="firstName"  placeholder=""/>
                         </div>
                         <div className="form-group">
-                          <label>Amount</label>
-                          <input  value={getExpense.amount} onChange={onChangeHandler} type="text" name="amount" className="form-control" id="lastName"  placeholder="Enter last name"/>
+                          <label>salary</label>
+                          <input  value={getExpense.amount} onChange={onChangeHandler} type="text" name="amount" className="form-control" id="lastName"  placeholder=""/>
                         </div>
                         
                       <div className="form-group">
                         <label>Paid By</label>
-                        <input value={getExpense.paidBy} onChange={onChangeHandler} type="text" name="paidBy" className="form-control" id="email" placeholder="Enter email"/>
+                        <input value={getExpense.paidBy} onChange={onChangeHandler} type="text" name="paidBy" className="form-control" id="email" placeholder=""/>
                       
                       </div>
                       <div className="form-group">
-                        <label>Date</label>
-                        <input value={getExpense.date} onChange={onChangeHandler} type="date"  name="date" className="form-control" id="password" placeholder="Password"/>
+                        <label>JoinDate</label>
+                        <input value={getExpense.date} onChange={onChangeHandler} type="date"  name="date" className="form-control" id="password" placeholder=""/>
                       </div>
                   
                       <button data-dismiss="modal" onClick={onEditSubmitHandler} type="submit" className="btn btn-success">ADD</button>
